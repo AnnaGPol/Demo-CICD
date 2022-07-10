@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<dataStoreHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>2d3fe32f-b5ec-451f-ba31-0213f372cc05</versionUuid>
+    <dataStore>
+        <uuid>4c3e0f09-998a-42c5-9dab-907403361c4a</uuid>
+        <name>Data Store</name>
+        <description>Data store containing all application's data store entities</description>
+        <dataSourceKey>jdbc/Appian</dataSourceKey>
+        <adaptingExplicitSqlNames>false</adaptingExplicitSqlNames>
+        <autoUpdateSchema>false</autoUpdateSchema>
+        <entities>
+            <entity>
+                <uuid>f3b599cd-e562-4070-805c-c878801f62c0</uuid>
+                <name>OrderDetail</name>
+                <type>{urn:com:appian:types}OrderDetail</type>
+            </entity>
+        </entities>
+    </dataStore>
+    <isPublished>true</isPublished>
+    <roleMap>
+        <role inherit="false" allowForAll="false" name="administrators">
+            <users/>
+            <groups>
+                <groupUuid>15b4f681-b785-4421-a7c1-e8ee84e218d5</groupUuid>
+            </groups>
+        </role>
+        <role inherit="false" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="readers">
+            <users/>
+            <groups>
+                <groupUuid>f70fd6ef-f7d6-4a4a-b478-558da6608fc9</groupUuid>
+            </groups>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="2d3fe32f-b5ec-451f-ba31-0213f372cc05"/>
+    </history>
+</dataStoreHaul>

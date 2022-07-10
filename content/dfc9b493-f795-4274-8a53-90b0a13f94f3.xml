@@ -1,0 +1,803 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e7a6-9aee-8000-9bd7-011c48011c48_1250913</versionUuid>
+    <outboundIntegration>
+        <name>callBrowserFB</name>
+        <uuid>dfc9b493-f795-4274-8a53-90b0a13f94f3</uuid>
+        <description></description>
+        <parentUuid>_a-0000e778-ca47-8000-9bce-011c48011c48_1179353</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition></definition>
+        <namedTypedValue>
+            <name>onSuccess</name>
+            <type>
+                <name>Variant</name>
+                <namespace>http://www.appian.com/ae/types/2009</namespace>
+            </type>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>onError</name>
+            <type>
+                <name>Variant</name>
+                <namespace>http://www.appian.com/ae/types/2009</namespace>
+            </type>
+        </namedTypedValue>
+        <metadataExpr>{
+deferredRuleInputs: {
+    onSuccess: {
+      "fv!result": 'type!{http://www.appian.com/ae/types/2009}Dictionary'
+    },
+    onError: {
+      "fv!result": 'type!{http://www.appian.com/ae/types/2009}Dictionary',
+      "fv!error": 'type!{http://www.appian.com/ae/types/2009}Dictionary',
+      "fv!connectedSystem": 'type!{http://www.appian.com/ae/types/2009}ConnectedSystem'
+    }
+  }
+}</metadataExpr>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+        <sharedConfigParameters>
+            <a:Dictionary xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        </sharedConfigParameters>
+        <configParameters>
+            <a:Dictionary xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <types xsi:type="a:Dictionary">
+                    <RootType xsi:type="a:Dictionary">
+                        <properties xsi:type="a:Dictionary?list">
+                            <item>
+<description xsi:nil="true" xsi:type="a:Null"/>
+<refresh xsi:type="xsd:string">ALWAYS</refresh>
+<placeholder xsi:type="xsd:string">Select a robotic process</placeholder>
+<isImportCustomizable xsi:type="xsd:boolean">false</isImportCustomizable>
+<instructionText xsi:type="xsd:string">Name of the robotic process to be executed</instructionText>
+<isExpressionable xsi:type="xsd:boolean">false</isExpressionable>
+<choices xsi:type="a:Dictionary?list">
+    <item>
+        <name xsi:type="xsd:string">A_Pranay_RPA_Bowser_SE</name>
+        <value xsi:type="xsd:string">618b670fe4b09739d750e5ad</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">A_Pranay_RPA_SE</name>
+        <value xsi:type="xsd:string">618b667fe4b09739d750e5ab</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">A_RPA_CMD</name>
+        <value xsi:type="xsd:string">61a0c9c3e4b09739d750e672</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">A_RPA_Open_Browser</name>
+        <value xsi:type="xsd:string">61b1fcfce4b09739d750e6fb</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">Ademo</name>
+        <value xsi:type="xsd:string">6114e3c0e4b08588a97485e3</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">AP_SendEmail</name>
+        <value xsi:type="xsd:string">61c9671ee4b0d4aca6c9334c</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">AppianCalculator</name>
+        <value xsi:type="xsd:string">602cde2fe4b00447cacb2ebf</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">AppianContractPratha</name>
+        <value xsi:type="xsd:string">60125be3e4b0ef6b885b36cc</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">Appianpratha</name>
+        <value xsi:type="xsd:string">60374aede4b00447cacb31a6</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">APrathaGac</name>
+        <value xsi:type="xsd:string">608f85f9e4b04e7e794dad08</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">AprroveDenyPD</name>
+        <value xsi:type="xsd:string">603f2be2e4b00447cacb3606</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">Asset_Management_AdminAssetCategory</name>
+        <value xsi:type="xsd:string">611b73ffe4b08588a9748661</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">Asset_Management_AdminAssetClassification</name>
+        <value xsi:type="xsd:string">6114e896e4b08588a97485ef</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">Asset_Management_AdminAssetComponent</name>
+        <value xsi:type="xsd:string">611f4b4ae4b08588a97486de</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">Asset_Management_AdminConfiguration</name>
+        <value xsi:type="xsd:string">613739c6e4b08588a9748821</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">Asset_Management_AdminCustomer</name>
+        <value xsi:type="xsd:string">615e7a08e4b08588a9748842</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">Asset_Management_AdminMasterComponentData</name>
+        <value xsi:type="xsd:string">61320480e4b08588a97487ec</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">Asset_Management_AdminMasterData</name>
+        <value xsi:type="xsd:string">6132022fe4b08588a97487e9</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">Asset_Management_AdminServicePlan</name>
+        <value xsi:type="xsd:string">61261bc4e4b08588a97487ac</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">Asset_Management_BaselineAssets</name>
+        <value xsi:type="xsd:string">615e7d82e4b08588a9748851</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">Asset_Management_ForgotPassword</name>
+        <value xsi:type="xsd:string">61112ce9e4b04e7e794db010</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">Asset_Management_InvalidLogin</name>
+        <value xsi:type="xsd:string">6111274be4b04e7e794daff5</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">Asset_Management_MyTask</name>
+        <value xsi:type="xsd:string">615e7cb9e4b08588a974884c</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">Asset_Management_RPA</name>
+        <value xsi:type="xsd:string">610d09ebe4b04e7e794dafa0</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">Asset_Management_ServiceRequest</name>
+        <value xsi:type="xsd:string">615e7b99e4b08588a9748847</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">AutomationTest</name>
+        <value xsi:type="xsd:string">61addc6fe4b09739d750e6e3</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">BGM_RPA_Test</name>
+        <value xsi:type="xsd:string">60bf3c6fe4b04e7e794daedc</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">Browser</name>
+        <value xsi:type="xsd:string">6013a5fde4b00447cacb2ca0</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">browser.application.skk</name>
+        <value xsi:type="xsd:string">6034c33ee4b00447cacb30ff</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">BrowserDemo1502</name>
+        <value xsi:type="xsd:string">620b75e4e4b0511e6e47108a</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">BrowserPragya</name>
+        <value xsi:type="xsd:string">601287d6e4b0ef6b885b36d8</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">Browsers</name>
+        <value xsi:type="xsd:string">6013de9ae4b00447cacb2ca5</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">BrowserTest</name>
+        <value xsi:type="xsd:string">6017d6c0e4b00447cacb2cf7</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">calculater</name>
+        <value xsi:type="xsd:string">602b5a6be4b00447cacb2e1b</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">Calculator</name>
+        <value xsi:type="xsd:string">60139b8ae4b00447cacb2c9b</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">CES_SendEmail</name>
+        <value xsi:type="xsd:string">61c952cce4b0d4aca6c9333f</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">Collaboration</name>
+        <value xsi:type="xsd:string">60741f4ee4b0007e0f2535c7</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">CollaborationGroupMode</name>
+        <value xsi:type="xsd:string">6062fc25e4b0d5d1868e57a1</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">CollaborationNewGroupMode</name>
+        <value xsi:type="xsd:string">6062bc6be4b0d5d1868e5760</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">CollaborationUserMode</name>
+        <value xsi:type="xsd:string">605daadae4b0d5d1868e573b</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">CreateContractICMS</name>
+        <value xsi:type="xsd:string">6052f545e4b0d5d1868e555f</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">CreateContractPD</name>
+        <value xsi:type="xsd:string">603c8b81e4b00447cacb33d4</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">DataProvider</name>
+        <value xsi:type="xsd:string">60487e7ee4b0d5d1868e52dd</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">Dataprovider</name>
+        <value xsi:type="xsd:string">60543cc4e4b0d5d1868e55a7</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">dataprovider.ksk</name>
+        <value xsi:type="xsd:string">602d0f70e4b00447cacb2f54</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">DataProvider_PD</name>
+        <value xsi:type="xsd:string">60335381e4b00447cacb30a8</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">DataProviderPragya</name>
+        <value xsi:type="xsd:string">6034f927e4b00447cacb3103</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">DemoPD</name>
+        <value xsi:type="xsd:string">602f75b8e4b00447cacb304f</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">EmaailAutomation</name>
+        <value xsi:type="xsd:string">6193d15ce4b09739d750e5d8</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">EmailAutomation</name>
+        <value xsi:type="xsd:string">6193d0cde4b09739d750e5d6</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">EUR</name>
+        <value xsi:type="xsd:string">60d03ce3e4b04e7e794daf17</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">EUR-test</name>
+        <value xsi:type="xsd:string">60d1a020e4b04e7e794daf31</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">EUR_lex</name>
+        <value xsi:type="xsd:string">60d07b82e4b04e7e794daf2a</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">ExcelDataProvider</name>
+        <value xsi:type="xsd:string">6018fa41e4b00447cacb2d5b</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">ExcelDataProvider_Demo_AP</name>
+        <value xsi:type="xsd:string">620de0d0e4b0511e6e4710be</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">ExcelReadWrite.data</name>
+        <value xsi:type="xsd:string">6049bd3be4b0d5d1868e53b1</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">Execute_Command_Line</name>
+        <value xsi:type="xsd:string">61b73a6ae4b06d3663caa843</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">ff</name>
+        <value xsi:type="xsd:string">611145bbe4b04e7e794db02d</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">first-robot-username</name>
+        <value xsi:type="xsd:string">602bcb7ce4b00447cacb2e4a</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">GAC-BillingInProgress</name>
+        <value xsi:type="xsd:string">60926665e4b04e7e794dae3b</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">GAC-POC</name>
+        <value xsi:type="xsd:string">608bd468e4b0007e0f253610</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">GAC-POC-Billing</name>
+        <value xsi:type="xsd:string">608fe4c7e4b04e7e794dad61</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">gac.ksk</name>
+        <value xsi:type="xsd:string">608f8878e4b04e7e794dad0f</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">GACDemo</name>
+        <value xsi:type="xsd:string">608bcc77e4b0007e0f25360a</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">GACDemo_Billing</name>
+        <value xsi:type="xsd:string">60922909e4b04e7e794dae14</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">GACProduce</name>
+        <value xsi:type="xsd:string">60902399e4b04e7e794dad87</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">GMailLoginPage</name>
+        <value xsi:type="xsd:string">620cbb36e4b0511e6e4710a1</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">hellopragya</name>
+        <value xsi:type="xsd:string">6034a79ce4b00447cacb30f2</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">Helloworld</name>
+        <value xsi:type="xsd:string">603490d6e4b00447cacb30e0</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">HelloWorld-prasad</name>
+        <value xsi:type="xsd:string">5fabe992e4b0bc6141ef06be</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">HelloWorld.ksk.1</name>
+        <value xsi:type="xsd:string">602d0114e4b00447cacb2f21</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">ICMSCollaborationGroupMode.SKK</name>
+        <value xsi:type="xsd:string">60486437e4b0d5d1868e52c5</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">ICMSCollaborationNewGroupMode.SKK</name>
+        <value xsi:type="xsd:string">604894e6e4b0d5d1868e52f7</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">ICMSCollaborationUserMode.SKK</name>
+        <value xsi:type="xsd:string">6045a59de4b0d5d1868e51c9</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">keyword.data.skk</name>
+        <value xsi:type="xsd:string">604f2d44e4b0d5d1868e547f</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">login.Template.ksk</name>
+        <value xsi:type="xsd:string">602ce8cae4b00447cacb2ee0</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">MouseAction.skk</name>
+        <value xsi:type="xsd:string">6033346ce4b00447cacb307b</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">MultipleOptionOne</name>
+        <value xsi:type="xsd:string">6040ae93e4b0d5d1868e50c4</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">notepade.skk</name>
+        <value xsi:type="xsd:string">602de61be4b00447cacb2f57</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">PoiGAC_Demo</name>
+        <value xsi:type="xsd:string">608fd161e4b04e7e794dad55</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">Pragya_ApproveDeny</name>
+        <value xsi:type="xsd:string">602f5c5de4b00447cacb302a</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">Prathademo</name>
+        <value xsi:type="xsd:string">60471b42e4b0d5d1868e5253</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">PrathaRpa</name>
+        <value xsi:type="xsd:string">61112f6fe4b04e7e794db017</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">PrathaTest</name>
+        <value xsi:type="xsd:string">604f2055e4b0d5d1868e5475</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">PrathaYcms</name>
+        <value xsi:type="xsd:string">602e23cde4b00447cacb2fa0</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">Prathayexle</name>
+        <value xsi:type="xsd:string">604f2deae4b0d5d1868e5481</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">QueRP</name>
+        <value xsi:type="xsd:string">60374e82e4b00447cacb31b7</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">RA_DownloadDocuments</name>
+        <value xsi:type="xsd:string">61926f87e4b09739d750e5b8</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">RA_ExecuteJar</name>
+        <value xsi:type="xsd:string">61b345c9e4b09739d750e712</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">RA_Test</name>
+        <value xsi:type="xsd:string">61c961c5e4b0d4aca6c93343</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">RA_TestingRecording</name>
+        <value xsi:type="xsd:string">61b1fea6e4b09739d750e706</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">RapCalculator</name>
+        <value xsi:type="xsd:string">602ca14fe4b00447cacb2e61</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">readEmails</name>
+        <value xsi:type="xsd:string">61d2af78e4b0d4aca6c933b2</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">Ricky'sRPACalculator</name>
+        <value xsi:type="xsd:string">6076d336e4b0007e0f2535dc</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">RickyBrowserTemplate</name>
+        <value xsi:type="xsd:string">60213c7ee4b00447cacb2db3</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">RickyHelloWorld</name>
+        <value xsi:type="xsd:string">6076d362e4b0007e0f2535df</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">rpa.falcon.skk</name>
+        <value xsi:type="xsd:string">602e6298e4b00447cacb2fd4</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">RPA.Queue.skk</name>
+        <value xsi:type="xsd:string">602e3c5ee4b00447cacb2fb8</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">RPA.Queue.skk</name>
+        <value xsi:type="xsd:string">602e3c5ee4b00447cacb2fb9</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">RPA_Recording</name>
+        <value xsi:type="xsd:string">61b196b7e4b09739d750e6ef</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">rpa_repo_Browser</name>
+        <value xsi:type="xsd:string">6022091be4b00447cacb2dbb</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">rpaTest</name>
+        <value xsi:type="xsd:string">6017db3ce4b00447cacb2d1f</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">SAPGUIScripting</name>
+        <value xsi:type="xsd:string">6018fa0ce4b00447cacb2d59</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">ScriptPragya</name>
+        <value xsi:type="xsd:string">60128575e4b0ef6b885b36d6</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">SeleniumAutomation</name>
+        <value xsi:type="xsd:string">618a3ce1e4b09739d750e59b</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">seleniumide.demo.skk</name>
+        <value xsi:type="xsd:string">602f6a92e4b00447cacb303a</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">Shilpa-Blank</name>
+        <value xsi:type="xsd:string">60c9d123e4b04e7e794daee0</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">SKYXL_Blank</name>
+        <value xsi:type="xsd:string">611f7391e4b08588a97486e7</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">TAF_Automation</name>
+        <value xsi:type="xsd:string">61b9939ae4b0d4aca6c932d3</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">testAP</name>
+        <value xsi:type="xsd:string">61d2dc23e4b0d4aca6c933b8</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">testGAC</name>
+        <value xsi:type="xsd:string">60924385e4b04e7e794dae2e</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">testjenkins</name>
+        <value xsi:type="xsd:string">60767c74e4b0007e0f2535cf</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">testMyJavaCode</name>
+        <value xsi:type="xsd:string">61d426ade4b0d4aca6c933d4</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">TestRickyRepo</name>
+        <value xsi:type="xsd:string">60220a0ee4b00447cacb2dbc</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">testRobo</name>
+        <value xsi:type="xsd:string">61cd688ce4b0d4aca6c93391</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">testUI_Automation_AP</name>
+        <value xsi:type="xsd:string">620de6d4e4b0511e6e4710c0</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">TrainingBot</name>
+        <value xsi:type="xsd:string">61d3fe3de4b0d4aca6c933bc</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">wiki.demo.ssk</name>
+        <value xsi:type="xsd:string">602e67f2e4b00447cacb2fd8</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">XlBrowserData</name>
+        <value xsi:type="xsd:string">620ce146e4b0511e6e4710a8</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">XlDataDemo</name>
+        <value xsi:type="xsd:string">620a240be4b0511e6e47106a</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">XlDataDemobrowser</name>
+        <value xsi:type="xsd:string">620a2676e4b0511e6e471072</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">XlDataDemoUI</name>
+        <value xsi:type="xsd:string">620a243be4b0511e6e47106c</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">ycm.log.ksk</name>
+        <value xsi:type="xsd:string">602cf92ce4b00447cacb2f0d</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">YCMS2021225.skk</name>
+        <value xsi:type="xsd:string">603f2de0e4b00447cacb361a</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">YCMS2021225734136300_Contract_document.skk</name>
+        <value xsi:type="xsd:string">603880a9e4b00447cacb32c4</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">YcmsCreateNewUser</name>
+        <value xsi:type="xsd:string">604b46bce4b0d5d1868e5451</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">YcmsExcelDataProvider</name>
+        <value xsi:type="xsd:string">6045f32be4b0d5d1868e5201</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">YcmsFullProcess</name>
+        <value xsi:type="xsd:string">603f334ce4b00447cacb362d</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">YcmsProcess</name>
+        <value xsi:type="xsd:string">603f32eae4b00447cacb3629</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">YcmsYexle</name>
+        <value xsi:type="xsd:string">604f2160e4b0d5d1868e5476</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">YexleRpa</name>
+        <value xsi:type="xsd:string">6111337ee4b04e7e794db01d</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">ZipFile_Action_KSK</name>
+        <value xsi:type="xsd:string">602d0703e4b00447cacb2f36</value>
+    </item>
+</choices>
+<label xsi:type="xsd:string">Robotic Process</label>
+<isRequired xsi:type="xsd:boolean">true</isRequired>
+<displayHint xsi:type="xsd:string">NORMAL</displayHint>
+<hasTransientChoices xsi:type="xsd:boolean">false</hasTransientChoices>
+<key xsi:type="xsd:string">robot</key>
+<isHidden xsi:type="xsd:boolean">false</isHidden>
+<isMasked xsi:type="xsd:boolean">false</isMasked>
+<isReadOnly xsi:type="xsd:boolean">false</isReadOnly>
+<type xsi:type="xsd:string">STRING</type>
+                            </item>
+                            <item>
+<description xsi:type="xsd:string">Only compatible resources (those that share the same permissions as the selected robotic process) are displayed in the dropdown.</description>
+<refresh xsi:type="xsd:string">NEVER</refresh>
+<placeholder xsi:type="xsd:string">First available resource</placeholder>
+<isImportCustomizable xsi:type="xsd:boolean">false</isImportCustomizable>
+<instructionText xsi:type="xsd:string">Name of the resource where the robotic process will be executed</instructionText>
+<isExpressionable xsi:type="xsd:boolean">true</isExpressionable>
+<choices xsi:type="a:Dictionary?list">
+    <item>
+        <name xsi:type="xsd:string">TestResource_Anna (Online)</name>
+        <value xsi:type="xsd:string">616d4b41e4b09739d750e4ee#1</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">bgm_test_resource (Offline)</name>
+        <value xsi:type="xsd:string">60bf3dd4e4b04e7e794daede#1</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">Pragya (Offline)</name>
+        <value xsi:type="xsd:string">60082148e4b0bc6162a9516d#1</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">PragyaAppain (Offline)</name>
+        <value xsi:type="xsd:string">60090b1fe4b0ef6b885b36bf#1</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">Pranay-RPA_Project (Offline)</name>
+        <value xsi:type="xsd:string">618aab6de4b09739d750e5a4#1</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">Prasad (Offline)</name>
+        <value xsi:type="xsd:string">5fa0041fe4b0bc6141ef06a0#1</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">Pratha (Offline)</name>
+        <value xsi:type="xsd:string">603f7b7be4b0d5d1868e4fec#1</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">PrathaPandya (Offline)</name>
+        <value xsi:type="xsd:string">6040c3c3e4b0d5d1868e5130#1</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">Rajasekhar_Pamidipati (Offline)</name>
+        <value xsi:type="xsd:string">61926dbbe4b09739d750e5b6#1</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">Ricky (Offline)</name>
+        <value xsi:type="xsd:string">6021407de4b00447cacb2db5#1</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">RickyYexle (Offline)</name>
+        <value xsi:type="xsd:string">6076a303e4b0007e0f2535d3#1</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">Satheeka (Offline)</name>
+        <value xsi:type="xsd:string">61a862f7e4b09739d750e6df#1</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">satheesh (Offline)</name>
+        <value xsi:type="xsd:string">602a3c9fe4b00447cacb2df7#1</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">satheeshkan (Offline)</name>
+        <value xsi:type="xsd:string">620b7fe5e4b0511e6e471092#1</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">TAFAutomationAgent (Offline)</name>
+        <value xsi:type="xsd:string">61b98822e4b0d4aca6c932c1#1</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">Yexle (Offline)</name>
+        <value xsi:type="xsd:string">6018eb33e4b00447cacb2d55#1</value>
+    </item>
+</choices>
+<label xsi:type="xsd:string">Resource</label>
+<isRequired xsi:type="xsd:boolean">false</isRequired>
+<displayHint xsi:type="xsd:string">NORMAL</displayHint>
+<hasTransientChoices xsi:type="xsd:boolean">false</hasTransientChoices>
+<key xsi:type="xsd:string">node</key>
+<isHidden xsi:type="xsd:boolean">false</isHidden>
+<isMasked xsi:type="xsd:boolean">false</isMasked>
+<isReadOnly xsi:type="xsd:boolean">false</isReadOnly>
+<type xsi:type="xsd:string">STRING</type>
+                            </item>
+                            <item>
+<description xsi:type="xsd:string">Execution description will be displayed in the console</description>
+<refresh xsi:type="xsd:string">NEVER</refresh>
+<placeholder xsi:nil="true" xsi:type="a:Null"/>
+<isImportCustomizable xsi:type="xsd:boolean">false</isImportCustomizable>
+<instructionText xsi:nil="true" xsi:type="a:Null"/>
+<isExpressionable xsi:type="xsd:boolean">true</isExpressionable>
+<label xsi:type="xsd:string">Description</label>
+<isRequired xsi:type="xsd:boolean">false</isRequired>
+<displayHint xsi:type="xsd:string">NORMAL</displayHint>
+<hasTransientChoices xsi:type="xsd:boolean">false</hasTransientChoices>
+<key xsi:type="xsd:string">description</key>
+<isHidden xsi:type="xsd:boolean">false</isHidden>
+<isMasked xsi:type="xsd:boolean">false</isMasked>
+<isReadOnly xsi:type="xsd:boolean">false</isReadOnly>
+<type xsi:type="xsd:string">STRING</type>
+                            </item>
+                            <item>
+<description xsi:nil="true" xsi:type="a:Null"/>
+<refresh xsi:type="xsd:string">NEVER</refresh>
+<placeholder xsi:type="xsd:string">Select priority</placeholder>
+<isImportCustomizable xsi:type="xsd:boolean">false</isImportCustomizable>
+<instructionText xsi:type="xsd:string">Priority of the execution request</instructionText>
+<isExpressionable xsi:type="xsd:boolean">true</isExpressionable>
+<choices xsi:type="a:Dictionary?list">
+    <item>
+        <name xsi:type="xsd:string">Highest</name>
+        <value xsi:type="xsd:string">HIGHEST</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">Higher</name>
+        <value xsi:type="xsd:string">HIGHER</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">High</name>
+        <value xsi:type="xsd:string">HIGH</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">Normal</name>
+        <value xsi:type="xsd:string">NORMAL</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">Low</name>
+        <value xsi:type="xsd:string">LOW</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">Lower</name>
+        <value xsi:type="xsd:string">LOWER</value>
+    </item>
+    <item>
+        <name xsi:type="xsd:string">Lowest</name>
+        <value xsi:type="xsd:string">LOWEST</value>
+    </item>
+</choices>
+<label xsi:type="xsd:string">Priority</label>
+<isRequired xsi:type="xsd:boolean">false</isRequired>
+<displayHint xsi:type="xsd:string">NORMAL</displayHint>
+<hasTransientChoices xsi:type="xsd:boolean">false</hasTransientChoices>
+<key xsi:type="xsd:string">priority</key>
+<isHidden xsi:type="xsd:boolean">false</isHidden>
+<isMasked xsi:type="xsd:boolean">false</isMasked>
+<isReadOnly xsi:type="xsd:boolean">false</isReadOnly>
+<type xsi:type="xsd:string">STRING</type>
+                            </item>
+                        </properties>
+                        <name xsi:type="xsd:string">RootType</name>
+                    </RootType>
+                </types>
+                <state xsi:type="a:Dictionary">
+                    <a:entry key="#t" xsi:type="xsd:string">#/types/RootType</a:entry>
+                    <node xsi:type="xsd:string">616d4b41e4b09739d750e4ee#1</node>
+                    <description xsi:type="xsd:string"/>
+                    <robot xsi:type="xsd:string">620b75e4e4b0511e6e47108a</robot>
+                    <priority xsi:type="xsd:string">HIGHEST</priority>
+                </state>
+                <connectedSystemTemplateKey xsi:type="xsd:string"/>
+            </a:Dictionary>
+        </configParameters>
+        <isWrite>true</isWrite>
+        <integrationType>plugin.[AppianRPA].[AppianRPA].[AppianRPAExecuteRobotIntegration2].WRITE@2</integrationType>
+        <connectedSystemUuid>_a-0000e780-b2df-8000-9bd4-011c48011c48_1200724</connectedSystemUuid>
+        <isConnectedSystemConnectionOptionSelected>true</isConnectedSystemConnectionOptionSelected>
+        <integrationOutputs>
+            <a:Dictionary xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <outputs xsi:type="a:IntegrationOutput?list"/>
+            </a:Dictionary>
+        </integrationOutputs>
+        <isRequestResponseLoggingEnabled>false</isRequestResponseLoggingEnabled>
+    </outboundIntegration>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e7a6-9aee-8000-9bd7-011c48011c48_1250913"/>
+    </history>
+</contentHaul>

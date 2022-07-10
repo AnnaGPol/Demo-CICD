@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>fab9436a-95c8-4c53-a3fd-2147495f0df6</versionUuid>
+    <rule>
+        <name>getOrderDetailById</name>
+        <uuid>fab9436a-95c8-4c53-a3fd-2147495f0df6</uuid>
+        <description>Rule to return a single Order Detail for a given id</description>
+        <parentUuid>_a-0000e6cf-8ca5-8000-9bc3-011c48011c48_1072205</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>a!localVariables(
+  local!query: #"SYSTEM_SYSRULES_queryEntity_v1"(
+    entity: #"b88ba52d-4ae5-4905-8494-42274056310b",
+    query: #"SYSTEM_SYSRULES_query"(
+      pagingInfo: #"SYSTEM_SYSRULES_pagingInfo"(startIndex: 1, batchSize: 1),
+      filter: {
+        #"SYSTEM_SYSRULES_queryFilter"(field: "id", operator: "=", value: ri!id)
+      }
+    ),
+    fetchTotalCount: true
+  ),
+  fn!if(
+    fn!or(
+      fn!isNull(local!query),
+      local!query.totalCount = 0
+    ),
+    {},
+    fn!cast(
+      'type!{urn:com:appian:types}OrderDetail',
+      local!query.data
+    )
+  )
+)</definition>
+        <namedTypedValue>
+            <name>id</name>
+            <type>
+                <name>int</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+        </namedTypedValue>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="fab9436a-95c8-4c53-a3fd-2147495f0df6"/>
+    </history>
+</contentHaul>

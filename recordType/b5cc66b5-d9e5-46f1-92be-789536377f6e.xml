@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recordTypeHaul xmlns:a="http://www.appian.com/ae/types/2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <versionUuid>d086aa51-1a3c-4612-a9df-034671927ef8</versionUuid>
+  <recordType a:uuid="b5cc66b5-d9e5-46f1-92be-789536377f6e" name="Order Detail">
+    <a:pluralName>Order Details</a:pluralName>
+    <a:description/>
+    <a:urlStub>AjMCOw</a:urlStub>
+    <a:source xsi:type="a:RecordsReplica"/>
+    <a:listViewTemplateExpr>#"SYSTEM_SYSRULES_recordGridField"(
+  columns: {
+    #"SYSTEM_SYSRULES_gridColumn"(
+      label: "Id",
+      sortField: #"urn:appian:record-field:v1:b5cc66b5-d9e5-46f1-92be-789536377f6e/af3f7c71-e77e-4bb7-8c37-e83e2a689b0e",
+      value: fv!row[#"urn:appian:record-field:v1:b5cc66b5-d9e5-46f1-92be-789536377f6e/af3f7c71-e77e-4bb7-8c37-e83e2a689b0e"],
+      align: "END"
+    ),
+    #"SYSTEM_SYSRULES_gridColumn"(
+      label: "Type",
+      sortField: #"urn:appian:record-field:v1:b5cc66b5-d9e5-46f1-92be-789536377f6e/3c7cbc98-aa29-4509-b254-34502356a374",
+      value: #"SYSTEM_SYSRULES_linkField"(
+        links: {
+          #"SYSTEM_SYSRULES_recordLink"(
+            label: fv!row[#"urn:appian:record-field:v1:b5cc66b5-d9e5-46f1-92be-789536377f6e/3c7cbc98-aa29-4509-b254-34502356a374"],
+            recordType: #"urn:appian:record-type:v1:b5cc66b5-d9e5-46f1-92be-789536377f6e",
+            identifier: fv!identifier
+          )
+        }
+      )
+    ),
+    #"SYSTEM_SYSRULES_gridColumn"(
+      label: "Email",
+      sortField: #"urn:appian:record-field:v1:b5cc66b5-d9e5-46f1-92be-789536377f6e/d9864ec9-451c-40fb-be51-9cb7071b1f04",
+      value: fv!row[#"urn:appian:record-field:v1:b5cc66b5-d9e5-46f1-92be-789536377f6e/d9864ec9-451c-40fb-be51-9cb7071b1f04"]
+    )
+  },
+  pageSize: 50,
+  shadeAlternateRows: true
+)</a:listViewTemplateExpr>
+    <a:detailViewCfg>
+      <a:nameExpr>a!rtd_getDefaultSummaryViewName()</a:nameExpr>
+      <a:uiExpr>#"_a-0000e723-fad0-8000-9bc6-011c48011c48_1120216"(record: rv!record)</a:uiExpr>
+      <a:visibilityExpr>=true()</a:visibilityExpr>
+      <a:urlStub>summary</a:urlStub>
+      <a:headerExpr/>
+      <a:relatedActionCfg>refId-4958a74d-e705-40e9-923b-18a723d017ea</a:relatedActionCfg>
+      <a:relatedActionCfg>refId-2148f2d2-2d0a-44bf-90d9-5c674fa213f8</a:relatedActionCfg>
+      <a:recordActionLaunchType>DIALOG</a:recordActionLaunchType>
+    </a:detailViewCfg>
+    <a:relatedActionCfg a:uuid="4958a74d-e705-40e9-923b-18a723d017ea">
+      <a:target a:uuid="baaf7b42-757c-4014-8aaf-65eda173c2e5" xsi:type="a:ProcessModel"/>
+      <a:contextExpr>{
+ record: #"fab9436a-95c8-4c53-a3fd-2147495f0df6"(rv!identifier),
+ cancel: fn!false()
+}</a:contextExpr>
+      <a:visibilityExpr>=true()</a:visibilityExpr>
+      <a:iconId>f044</a:iconId>
+      <a:refId>refId-4958a74d-e705-40e9-923b-18a723d017ea</a:refId>
+      <a:staticTitleString>Update Order Detail</a:staticTitleString>
+      <a:staticDescriptionString>Action to update a Order Detail</a:staticDescriptionString>
+      <a:referenceKey>updateOrderDetail</a:referenceKey>
+      <a:dialogSize>LARGE</a:dialogSize>
+    </a:relatedActionCfg>
+    <a:relatedActionCfg a:uuid="2148f2d2-2d0a-44bf-90d9-5c674fa213f8">
+      <a:target a:uuid="0005e762-9a89-8000-7609-7f0000014e7a" xsi:type="a:ProcessModel"/>
+      <a:contextExpr>{
+  orderId: rv!identifier, /* Number (Integer) */
+  record:#"fab9436a-95c8-4c53-a3fd-2147495f0df6"(rv!identifier) /* OrderDetail */
+}</a:contextExpr>
+      <a:visibilityExpr>=true()</a:visibilityExpr>
+      <a:iconId>f0e7</a:iconId>
+      <a:refId>refId-2148f2d2-2d0a-44bf-90d9-5c674fa213f8</a:refId>
+      <a:staticTitleString>Send Email</a:staticTitleString>
+      <a:staticDescriptionString/>
+      <a:referenceKey>sendEmail</a:referenceKey>
+      <a:dialogSize>LARGE</a:dialogSize>
+    </a:relatedActionCfg>
+    <a:isSystem>false</a:isSystem>
+    <a:dataSrcExpr/>
+    <a:facetsListExpr/>
+    <a:titleExpr>rv!record[#"urn:appian:record-field:v1:b5cc66b5-d9e5-46f1-92be-789536377f6e/3c7cbc98-aa29-4509-b254-34502356a374"]</a:titleExpr>
+    <a:defaultFiltersExpr/>
+    <a:layoutType>GRID</a:layoutType>
+    <a:security>16383</a:security>
+    <a:hideLatestNews>false</a:hideLatestNews>
+    <a:hideNewsView>false</a:hideNewsView>
+    <a:hideRelatedActionsView>false</a:hideRelatedActionsView>
+    <a:isExportable>true</a:isExportable>
+    <a:listViewSrcExpr/>
+    <a:recordViewSrcExpr/>
+    <a:recordListActionCfg a:uuid="78450e4f-a9cb-4aa9-8b74-1eeacb369545">
+      <a:staticTitle>New Order Detail</a:staticTitle>
+      <a:staticDescription>Action to create a new Order Detail</a:staticDescription>
+      <a:iconId>f067</a:iconId>
+      <a:target a:uuid="436c3971-e144-4e52-9d0c-f23ee30cdba3" xsi:type="a:ProcessModel"/>
+      <a:visibilityExpr>=true()</a:visibilityExpr>
+      <a:referenceKey>newOrderDetail</a:referenceKey>
+      <a:dialogSize>LARGE</a:dialogSize>
+    </a:recordListActionCfg>
+    <a:iconId/>
+    <a:listAutoRefreshInterval>0.0</a:listAutoRefreshInterval>
+    <a:sourceConfiguration>
+      <sourceUuid>demoorder@jdbc/Appian</sourceUuid>
+      <sourceType>RDBMS_TABLE</sourceType>
+      <friendlyName>demoorder</friendlyName>
+      <sourceFilterExpr>#"SYSTEM_SYSRULES_queryLogicalExpression"(
+  operator: "AND",
+  filters: {
+    #"SYSTEM_SYSRULES_queryFilter"(
+      field: "email",
+      operator: "not null"
+    )
+  },
+  ignoreFiltersWithEmptyValues: true
+)</sourceFilterExpr>
+      <field>
+        <uuid>af3f7c71-e77e-4bb7-8c37-e83e2a689b0e</uuid>
+        <type>{http://www.appian.com/ae/types/2009}Integer</type>
+        <sourceFieldName>id</sourceFieldName>
+        <sourceFieldType>INTEGER</sourceFieldType>
+        <fieldName>id</fieldName>
+        <isRecordId>true</isRecordId>
+        <isUnique>true</isUnique>
+        <isCustomField>false</isCustomField>
+        <customFieldExpr/>
+        <fieldCalculationType>NA</fieldCalculationType>
+      </field>
+      <field>
+        <uuid>3c7cbc98-aa29-4509-b254-34502356a374</uuid>
+        <type>{http://www.appian.com/ae/types/2009}Text</type>
+        <sourceFieldName>type</sourceFieldName>
+        <sourceFieldType>VARCHAR(255)</sourceFieldType>
+        <fieldName>type</fieldName>
+        <isRecordId>false</isRecordId>
+        <isUnique>false</isUnique>
+        <isCustomField>false</isCustomField>
+        <customFieldExpr/>
+        <fieldCalculationType>NA</fieldCalculationType>
+      </field>
+      <field>
+        <uuid>d9864ec9-451c-40fb-be51-9cb7071b1f04</uuid>
+        <type>{http://www.appian.com/ae/types/2009}Text</type>
+        <sourceFieldName>email</sourceFieldName>
+        <sourceFieldType>VARCHAR(255)</sourceFieldType>
+        <fieldName>email</fieldName>
+        <isRecordId>false</isRecordId>
+        <isUnique>false</isUnique>
+        <isCustomField>false</isCustomField>
+        <customFieldExpr/>
+        <fieldCalculationType>NA</fieldCalculationType>
+      </field>
+      <joinType>LEFT</joinType>
+      <uuid>579724e5-37fc-4237-a7bb-97d01af5ecad</uuid>
+      <refreshSchedule>
+        <frequency>DAILY</frequency>
+        <value>{"hour":3,"minute":"00","amPM":"AM","timeZone":"GMT"}</value>
+        <activated>true</activated>
+      </refreshSchedule>
+      <skipFailureEnabled>false</skipFailureEnabled>
+    </a:sourceConfiguration>
+    <a:enabledFeatures>63</a:enabledFeatures>
+    <a:isVisibleInRecordTypeList>false</a:isVisibleInRecordTypeList>
+    <a:recordActionLaunchType>DIALOG</a:recordActionLaunchType>
+    <a:showSearchBox>true</a:showSearchBox>
+  </recordType>
+  <roleMap>
+    <role name="record_type_viewer">
+      <users/>
+      <groups>
+        <groupUuid>f70fd6ef-f7d6-4a4a-b478-558da6608fc9</groupUuid>
+      </groups>
+    </role>
+  </roleMap>
+  <history>
+    <historyInfo versionUuid="d086aa51-1a3c-4612-a9df-034671927ef8"/>
+  </history>
+  <migrationVersion>1</migrationVersion>
+</recordTypeHaul>
